@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
         - name: server
-          image: gcr.io/vino9-276317/demoapp/customer-v1
+          image: gcr.io/vino9-276317/demoapp/customer-v1:eb94674ca3f3e2deaee7c043e518191679e20a0c
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9000
