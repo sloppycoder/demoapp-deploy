@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flux
+  namespace: flux
+spec:
+  template:
+    spec:
+      containers:
+        - name: flux
+          args:
+            - --manifest-generation=true
+            - --memcached-hostname=memcached.flux
+            - --memcached-service=
+            - --git-poll-interval=1m
+            - --sync-interval=1m
+            - --ssh-keygen-dir=/var/fluxd/keygen
+            - --git-branch=master
+            - --git-path=workloads,charts
+            - --git-user=sloppycoder
+            - --git-email=sloppycoder@users.noreply.github.com
+            - --git-url=https://github.com/sloppycoder/demoapp-deploy.git
