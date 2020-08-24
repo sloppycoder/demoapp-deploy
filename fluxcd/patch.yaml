@@ -19,4 +19,4 @@ spec:
             - --git-path=workloads,charts
             - --git-user=sloppycoder
             - --git-email=sloppycoder@users.noreply.github.com
-            - --git-url=https://github.com/sloppycoder/demoapp-deploy.git
+            - --git-url=git@github.com:sloppycoder/demoapp-deploy.git
